@@ -116,6 +116,19 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
 .hero-trust { display: flex; gap: 30px; flex-wrap: wrap; }
 .hero-note { margin-top: 16px; font-size: .85rem; color: var(--muted-2); max-width: 460px; }
+
+.hero-logos {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  padding: 20px 0 4px;
+}
+.cloud-logo { height: 30px; width: auto; color: var(--text); opacity: .92; transition: opacity .2s, transform .2s; }
+.cloud-logo:hover { opacity: 1; transform: translateY(-1px); }
+.logo-divider { width: 1px; height: 26px; background: var(--border-strong); }
+@media (max-width: 680px) {
+  .hero-logos { gap: 16px; }
+  .logo-divider { display: none; }
+  .cloud-logo { height: 26px; }
+}
 .trust-item { display: flex; flex-direction: column; }
 .trust-item strong { font-family: var(--font-display); font-size: 1.05rem; }
 .trust-item span { font-size: .78rem; color: var(--muted-2); text-transform: uppercase; letter-spacing: .08em; }
