@@ -171,6 +171,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .stat { text-align: center; }
 .stat-num { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; }
 .stat-plus { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; background: linear-gradient(120deg, var(--brand), var(--accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-word { display: block; font-family: var(--font-display); font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 800; }
 .stat p { color: var(--muted); font-size: .92rem; margin-top: 4px; }
 
 /* ===== Sections ===== */
