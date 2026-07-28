@@ -75,11 +75,12 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
   border-bottom: 1px solid transparent;
 }
 .site-header.scrolled {
-  background: rgba(10, 14, 26, 0.8); backdrop-filter: blur(14px);
+  background: rgba(12, 8, 9, 0.85); backdrop-filter: blur(14px);
   border-bottom-color: var(--border);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+.logo { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 800; font-size: 1.42rem; letter-spacing: -.02em; }
+.logo-suffix { font-weight: 700; }
 .logo-mark { display: grid; place-items: center; }
 .logo-accent { color: var(--brand); }
 .logo-accent { background: linear-gradient(120deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .nav-toggle span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
 
 /* ===== Hero ===== */
-.hero { position: relative; padding: 150px 0 90px; overflow: hidden; }
+.hero { position: relative; padding: 162px 0 90px; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .5; }
 .orb-1 { width: 520px; height: 520px; background: radial-gradient(circle, var(--brand), transparent 70%); top: -120px; left: -80px; }
@@ -148,7 +149,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .glass-card {
-  background: linear-gradient(145deg, rgba(30,38,64,.85), rgba(20,26,46,.7));
+  background: linear-gradient(145deg, rgba(46,28,31,.88), rgba(26,17,19,.75));
   border: 1px solid var(--border-strong); border-radius: var(--radius-sm);
   backdrop-filter: blur(10px); box-shadow: var(--shadow);
 }
@@ -220,6 +221,22 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 }
 .ai-feature h4 { font-size: 1.05rem; margin-bottom: 4px; }
 .ai-feature p { color: var(--muted); font-size: .9rem; }
+
+.ai-tools { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--border); }
+.ai-tools-label {
+  font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted-2); margin-bottom: 14px;
+}
+.tool-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.tool-chip {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: .9rem; font-weight: 600; color: var(--text);
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+  padding: 9px 16px; border-radius: 999px;
+  transition: border-color .2s, transform .2s, color .2s;
+}
+.tool-chip:hover { border-color: var(--brand); color: #fff; transform: translateY(-2px); }
+.tool-chip svg { flex: 0 0 auto; opacity: .95; }
 
 .ai-visual { display: flex; justify-content: center; }
 .glass-panel {
@@ -332,7 +349,9 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
   .footer-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
-  .nav { position: fixed; inset: 72px 0 auto; flex-direction: column; gap: 0; background: rgba(10,14,26,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 12px 24px 22px; transform: translateY(-140%); transition: transform .35s ease; align-items: stretch; }
+  .logo { font-size: 1.15rem; gap: 9px; }
+  .logo-suffix { display: none; }
+  .nav { position: fixed; inset: 84px 0 auto; flex-direction: column; gap: 0; background: rgba(12,8,9,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 12px 24px 22px; transform: translateY(-140%); transition: transform .35s ease; align-items: stretch; }
   .nav.open { transform: translateY(0); }
   .nav a { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav .nav-cta { text-align: center; margin-top: 14px; border-bottom: 0; }
