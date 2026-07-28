@@ -1,21 +1,21 @@
 /* ===== Design tokens ===== */
 :root {
-  --bg: #0a0e1a;
-  --bg-2: #0f1424;
-  --surface: #141a2e;
-  --surface-2: #1a2138;
+  --bg: #0c0809;
+  --bg-2: #140d0f;
+  --surface: #1a1113;
+  --surface-2: #221618;
   --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --text: #eef1f8;
-  --muted: #9aa3bd;
-  --muted-2: #6f7896;
-  --brand: #4f7cff;
-  --brand-2: #8a5cff;
-  --accent: #38e0c8;
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --text: #f5eeef;
+  --muted: #bda6aa;
+  --muted-2: #8a7175;
+  --brand: #ef3b3b;
+  --brand-2: #b31217;
+  --accent: #ff7a45;
   --radius: 18px;
   --radius-sm: 12px;
-  --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 60px -15px rgba(79, 124, 255, 0.45);
+  --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 60px -15px rgba(239, 59, 59, 0.45);
   --container: 1160px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Sora', var(--font);
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   color: #fff; box-shadow: var(--shadow-glow);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 70px -10px rgba(138, 92, 255, 0.6); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 70px -10px rgba(179, 18, 23, 0.65); }
 .btn-ghost { background: rgba(255,255,255,.04); border-color: var(--border-strong); color: var(--text); }
 .btn-ghost:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
 .btn-block { width: 100%; }
@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .hero-sub { font-size: 1.14rem; color: var(--muted); max-width: 540px; margin-bottom: 34px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
 .hero-trust { display: flex; gap: 30px; flex-wrap: wrap; }
+.hero-note { margin-top: 16px; font-size: .85rem; color: var(--muted-2); max-width: 460px; }
 .trust-item { display: flex; flex-direction: column; }
 .trust-item strong { font-family: var(--font-display); font-size: 1.05rem; }
 .trust-item span { font-size: .78rem; color: var(--muted-2); text-transform: uppercase; letter-spacing: .08em; }
@@ -124,8 +125,8 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .hero-ring {
   position: absolute; inset: 10% 15%; border-radius: 50%;
   border: 1px solid var(--border-strong);
-  background: radial-gradient(circle at 50% 40%, rgba(79,124,255,.14), transparent 60%);
-  box-shadow: inset 0 0 80px rgba(138,92,255,.15);
+  background: radial-gradient(circle at 50% 40%, rgba(239,59,59,.16), transparent 60%);
+  box-shadow: inset 0 0 80px rgba(179,18,23,.18);
   animation: spin 40s linear infinite;
 }
 .hero-ring::before {
@@ -173,16 +174,16 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 }
 .service-card::before {
   content: ''; position: absolute; inset: 0; border-radius: var(--radius);
-  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 0%), rgba(79,124,255,.1), transparent 40%);
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 0%), rgba(239,59,59,.12), transparent 40%);
   opacity: 0; transition: opacity .3s;
 }
 .service-card:hover { transform: translateY(-6px); border-color: var(--border-strong); box-shadow: var(--shadow); }
 .service-card:hover::before { opacity: 1; }
-.service-card.featured { border-color: rgba(79,124,255,.4); background: linear-gradient(180deg, rgba(79,124,255,.08), var(--surface)); }
+.service-card.featured { border-color: rgba(239,59,59,.45); background: linear-gradient(180deg, rgba(239,59,59,.09), var(--surface)); }
 .service-badge {
   position: absolute; top: 18px; right: 18px; font-size: .72rem; font-weight: 600; letter-spacing: .05em;
-  text-transform: uppercase; color: var(--brand); background: rgba(79,124,255,.12);
-  border: 1px solid rgba(79,124,255,.3); padding: 5px 11px; border-radius: 999px;
+  text-transform: uppercase; color: #ff7a6b; background: rgba(239,59,59,.14);
+  border: 1px solid rgba(239,59,59,.35); padding: 5px 11px; border-radius: 999px;
 }
 .service-icon { font-size: 2rem; margin-bottom: 18px; display: inline-block; }
 .service-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
@@ -243,6 +244,13 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; }
 .about-point { display: flex; align-items: center; gap: 10px; font-size: .94rem; font-weight: 500; }
 .about-point span { color: var(--accent); font-weight: 800; }
+.tech-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.tech-strip span {
+  font-size: .8rem; font-weight: 500; color: var(--muted);
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 6px 12px; border-radius: 999px;
+}
+
 .about-visual { display: grid; gap: 18px; }
 .value-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -257,12 +265,12 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
 .cta-section { padding: 80px 0 100px; }
 .cta-card {
   position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px;
-  background: linear-gradient(135deg, rgba(79,124,255,.16), rgba(138,92,255,.12));
+  background: linear-gradient(135deg, rgba(239,59,59,.18), rgba(179,18,23,.14));
   border: 1px solid var(--border-strong); border-radius: 26px; padding: 52px; overflow: hidden;
 }
 .cta-card::before {
   content: ''; position: absolute; width: 340px; height: 340px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(56,224,200,.25), transparent 70%);
+  background: radial-gradient(circle, rgba(255,122,69,.28), transparent 70%);
   top: -140px; right: -80px; filter: blur(30px);
 }
 .cta-copy { position: relative; z-index: 1; }
@@ -280,7 +288,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.12; letter
   padding: 12px 14px; color: var(--text); font-family: var(--font); font-size: .95rem; resize: vertical;
   transition: border-color .2s, box-shadow .2s;
 }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(79,124,255,.18); }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(239,59,59,.2); }
 .field input::placeholder, .field textarea::placeholder { color: var(--muted-2); }
 .form-note { font-size: .86rem; text-align: center; min-height: 18px; }
 .form-note.success { color: var(--accent); }
